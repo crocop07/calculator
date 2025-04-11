@@ -18,6 +18,12 @@
 
 }
 
+.display{
+    width: 100%;
+    height:30px;
+    text-align: right;
+}
+
 .calc-numbers-buttons-container{
     flex: 3;
     justify-self: left;
@@ -45,11 +51,22 @@
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     cursor: pointer; /* Change cursor to pointer on hover */
+    
 }
 
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
 .calc-operations-buttons-container{
     display: flex;
     flex:1;
+    
+    flex-direction: column;
     border-style: solid;
 }
 
@@ -63,10 +80,26 @@
 
 .operations{
     display: flex;
+    flex:3;
     flex-direction: column;
     width:100%;
 }
 .operations button{
-    flex: 1;
-    
+    flex: 1; /* Each button takes equal space */
+    min-height: 0; /* Important for equal distribution */
+    font-size: 18px;
+    border: none;
+    background-color: #4ecdc4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.commands{
+    display: flex;
+    min-height: 0; /* Important for equal distribution */
+    font-size: 18px;
+    flex:1;
+    flex-direction: column;
+    width:100%;
 }
